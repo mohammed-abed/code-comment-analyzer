@@ -19,14 +19,8 @@ This project fine-tunes CodeBERT (a transformer model pre-trained on code) to cl
 - **Reproducible Pipeline**: End-to-end training and evaluation with fixed seeds
 
 ## Results Preview
+The pipeline supports end-to-end training and evaluation. Results depend on dataset composition and annotation quality. See methodology section for training details.
 
-| Model | Accuracy | Macro F1 | Training Time |
-|-------|----------|----------|---------------|
-| Rule-based | 0.689 | 0.652 | - |
-| TF-IDF + LR | 0.724 | 0.701 | ~2 min |
-| CodeBERT (fine-tuned) | **0.847** | **0.831** | ~45 min |
-
-**Key Finding**: Transformer model achieves 23% accuracy improvement over rule-based baseline (p < 0.001)
 
 ## Installation
 
@@ -205,13 +199,7 @@ python -m src.evaluate \
     --output results/reproduction/
 ```
 
-### Expected Results
 
-Training on synthetic dataset (2000 examples, 3 epochs):
-
-- **Training Time**: ~45 minutes on Tesla T4 GPU
-- **Test Accuracy**: 0.847 ± 0.012 (over 5 runs)
-- **Test Macro F1**: 0.831 ± 0.015
 
 ## Extending the Project
 
@@ -308,6 +296,6 @@ Project Link: [https://github.com/mohammed-abed/code-comment-analyzer](https://g
 
 
 
-## Note
-This project was primarily developed offline. The full project was uploaded to GitHub upon completion, which may result in commit dates appearing close together. The commit history does not reflect the actual development timeline.
+## Development note: 
 
+This project was built offline and pushed to GitHub upon completion rather than incrementally. I was based in Gaza during this period, where consistent internet access was not reliably available. The commit history does not reflect the actual development timeline."
